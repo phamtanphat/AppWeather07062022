@@ -17,7 +17,7 @@ public class WeatherRepository {
         apiService = RetrofitClient.getInstance().getApiService();
     }
 
-    Call<SearchDTO> searchTempFromCity(String cityName) {
+    public Call<SearchDTO> searchTempFromCity(String cityName) {
         return apiService.searchTempFormCityName(AppConstant.APP_ID, "metric", cityName);
     }
 }

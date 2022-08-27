@@ -5,10 +5,10 @@ package com.example.appweather07062022.data.model;
  */
 public class City {
     private String name;
-    private float lat;
-    private float lon;
+    private double lat;
+    private double lon;
 
-    public City(String name, float lat, float lon) {
+    public City(String name, double lat, double lon) {
         this.name = name;
         this.lat = lat;
         this.lon = lon;
@@ -24,19 +24,19 @@ public class City {
         this.name = name;
     }
 
-    public float getLat() {
+    public double getLat() {
         return lat;
     }
 
-    public void setLat(float lat) {
+    public void setLat(double lat) {
         this.lat = lat;
     }
 
-    public float getLon() {
+    public double getLon() {
         return lon;
     }
 
-    public void setLon(float lon) {
+    public void setLon(double lon) {
         this.lon = lon;
     }
 }

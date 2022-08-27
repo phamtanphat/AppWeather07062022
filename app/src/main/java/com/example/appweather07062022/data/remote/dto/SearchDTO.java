@@ -86,29 +86,29 @@ public class SearchDTO {
     }
 
     public class MainDTO {
-        private int temp;
+        private double temp;
         @SerializedName("temp_min")
-        private int tempMin;
+        private double tempMin;
         @SerializedName("temp_max")
-        private int tempMax;
+        private double tempMax;
 
-        public int getTemp() {
+        public double getTemp() {
             return temp;
         }
 
-        public void setTemp(int temp) {
+        public void setTemp(double temp) {
             this.temp = temp;
         }
 
-        public int getTempMin() {
+        public double getTempMin() {
             return tempMin;
         }
 
-        public void setTempMin(int tempMin) {
+        public void setTempMin(double tempMin) {
             this.tempMin = tempMin;
         }
 
-        public int getTempMax() {
+        public double getTempMax() {
             return tempMax;
         }
 

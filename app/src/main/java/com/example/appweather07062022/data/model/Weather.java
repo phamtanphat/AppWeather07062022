@@ -4,14 +4,14 @@ package com.example.appweather07062022.data.model;
  * Created by pphat on 8/27/2022.
  */
 public class Weather {
-    private float temp;
-    private float tempMin;
-    private float tempMax;
+    private double temp;
+    private double tempMin;
+    private double tempMax;
     private String description;
     private long timeCurrent;
     private String icon;
 
-    public Weather(float temp, float tempMin, float tempMax, String description, long timeCurrent, String icon) {
+    public Weather(double temp, double tempMin, double tempMax, String description, long timeCurrent, String icon) {
         this.temp = temp;
         this.tempMin = tempMin;
         this.tempMax = tempMax;
@@ -23,27 +23,27 @@ public class Weather {
     public Weather() {
     }
 
-    public float getTemp() {
+    public double getTemp() {
         return temp;
     }
 
-    public void setTemp(float temp) {
+    public void setTemp(double temp) {
         this.temp = temp;
     }
 
-    public float getTempMin() {
+    public double getTempMin() {
         return tempMin;
     }
 
-    public void setTempMin(float tempMin) {
+    public void setTempMin(double tempMin) {
         this.tempMin = tempMin;
     }
 
-    public float getTempMax() {
+    public double getTempMax() {
         return tempMax;
     }
 
-    public void setTempMax(float tempMax) {
+    public void setTempMax(double tempMax) {
         this.tempMax = tempMax;
     }
 
