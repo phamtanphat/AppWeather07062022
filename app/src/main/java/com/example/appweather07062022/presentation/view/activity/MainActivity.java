@@ -10,8 +10,8 @@ import android.os.Bundle;
 import android.util.Log;
 
 import com.example.appweather07062022.R;
-import com.example.appweather07062022.data.model.ClimateDetail;
-import com.example.appweather07062022.data.remote.RetrofitClient;
+import com.example.appweather07062022.data.model.ClimateForecastDetail;
+import com.example.appweather07062022.data.model.ClimateSearchDetail;
 import com.example.appweather07062022.data.repository.WeatherRepository;
 
 public class MainActivity extends AppCompatActivity {
@@ -31,15 +31,34 @@ public class MainActivity extends AppCompatActivity {
             }
         }).get(MainViewModel.class);
 
-        mainViewModel.getClimateDetailLiveData().observe(this, new Observer<ClimateDetail>() {
+        mainViewModel.getClimateDetailLiveData().observe(this, new Observer<ClimateSearchDetail>() {
             @Override
-            public void onChanged(ClimateDetail climateDetail) {
-                if (climateDetail != null) {
-                    Log.d("BBB",climateDetail.toString());
+            public void onChanged(ClimateSearchDetail climateSearchDetail) {
+                if (climateSearchDetail != null) {
+                    Log.d("BBB", climateSearchDetail.toString());
                 }
             }
         });
 
-        mainViewModel.searchTempFromCity("Hanoi");
+        mainViewModel.getClimateForecastDetailLiveData().observe(this, new Observer<ClimateForecastDetail>() {
+            @Override
+            public void onChanged(ClimateForecastDetail climateForecastDetail) {
+                if (climateForecastDetail != null) {
+                    Log.d("BBB", climateForecastDetail.toString());
+                }
+            }
+        });
+
+        mainViewModel.getMessage().observe(this, new Observer<String>() {
+            @Override
+            public void onChanged(String s) {
+                if (s != null && !s.isEmpty()) {
+                    Log.d("BBB","Error " + s);
+                }
+            }
+        });
+
+//        mainViewModel.searchTempFromCity("Hanoi213213213");
+        mainViewModel.fetchTemp7DayFromCity("Hanoi");
     }
 }

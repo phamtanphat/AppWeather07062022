@@ -5,14 +5,14 @@ import com.example.appweather07062022.data.remote.dto.SearchDTO;
 /**
  * Created by pphat on 8/27/2022.
  */
-public class ClimateDetail {
+public class ClimateSearchDetail {
     private City city;
     private Weather weather;
 
-    public ClimateDetail() {
+    public ClimateSearchDetail() {
     }
 
-    public ClimateDetail(City city, Weather weather) {
+    public ClimateSearchDetail(City city, Weather weather) {
         this.city = city;
         this.weather = weather;
     }
